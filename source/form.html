@@ -29,9 +29,79 @@
     </nav>
   </header>
 
-  <main class="page-main"></main>
+  <main class="page-main">
+    <main class="page-main">
+      <h1>Подбор программы</h1>
+      <h2>Заполните анкету и мы подберем программу питания для вашего кота</h2>
+
+      <form class="form" action="https://echo.htmlacademy.ru" method="POST">
+        <div class="form__row">
+          <label for="name">Имя:*</label>
+          <input name="name" type="text" id="name" value="Барсик" required />
+        </div>
+        <div class="form__row">
+          <label for="weight">Вес (кг):*</label>
+          <input name="weight" type="number" id="weight" value="7" required />
+        </div>
+        <div class="form__row">
+          <label for="age">Возраст (лет):</label>
+          <input name="age" type="number" id="age" value="7" />
+        </div>
+        <div class="form__row">
+          <label>
+            <input type="radio" name="program" value="slim" checked />Похудение</label>
+          <label>
+            <input type="radio" name="program" value="pro" />Набор массы
+          </label>
+          <label>
+            <input type="radio" name="program" value="advice" />Не знаю (Нужен
+            ваш совет)
+          </label>
+        </div>
+        <p class="form__group-label">Контактные данные (владельца кота)</p>
+        <div class="form__row">
+          <label for="email">E-mail:*</label>
+          <input name="email" type="email" id="email" value="kuklachev@gmail.com" required />
+          <span class="form__email-addon"></span>
+        </div>
+        <div class="form__row">
+          <label for="email">Телефон:*</label>
+          <input name="phone" type="tel" pattern="[0-9]{1}\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}" id="phone" value="8 (960) 900-60-90" required />
+          <span class="form__phone-addon"></span>
+        </div>
+        <p class="form__group-label">Комментарий</p>
+        <div class="form__row">
+          <textarea name="comment" rows="10">
+    Расскажите обо всех повадках кота</textarea>
+        </div>
+        <p class="form__group-label">Дополнительно</p>
+        <div class="form__row">
+          <input type="checkbox" name="sweetener" id="extra-sweetener" checked />
+          <label for="extra-sweetener">Сахарозаменитель</label>
+          <input type="checkbox" name="water" id="extra-water" />
+          <label for="extra-water">Питьевая вода</label>
+          <input type="checkbox" name="milk" id="extra-milk" />
+          <label for="extra-milk">Молоко</label>
+          <input type="checkbox" name="vitamins" id="extra-vitamins" />
+          <label for="extra-vitamins">Витамины</label>
+        </div>
+        <input type="submit" value="Отправить заявку" />
+        <small class="form__legend"> <sup>*</sup> — Обязательные поля </small>
+      </form>
+    </main>
+  </main>
 
   <footer class="page-footer">
+    <section class="contacts">
+      <div class="contacts__wrapper">
+        <h2 class="contants__title">Приглашаем к сотрудничеству дилеров!</h2>
+        <p class="contacts__text">
+          ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+        </p>
+        <img class="contacts__map" src="https://via.placeholder.com/320x400" width="320" height="400" alt="Карта" />
+      </div>
+    </section>
+
     <a class="page-footer__logo">
       <img class="page-footer__logo-image" src="https://via.placeholder.com/128x24" width="128" height="24" alt="Кэт энерджи" />
     </a>
