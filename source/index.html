@@ -1,12 +1,215 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+    <header class="page-header">
+       <a class="page-header__logo">
+         <img
+           class="page-header__logo-image"
+           src="https://via.placeholder.com/191x39"
+           width="191"
+           height="39"
+           alt="Кэт энерджи"
+         />
+       </a>
+       <nav class="main-nav">
+         <button class="main-nav__toggle" type="button">Открыть меню</button>
+         <div class="main-nav__wrapper">
+           <ul class="main-nav__list site-list">
+             <li class="site-list__item site-list__item--active">
+               <a>Главная</a>
+             </li>
+             <li class="site-list__item">
+               <a href="catalog.html">Каталог продукции</a>
+             </li>
+             <li class="site-list__item">
+               <a href="form.html">Подбор программы</a>
+             </li>
+           </ul>
+         </div>
+       </nav>
+     </header>
+
+     <main class="page-main">
+      <h1>Функциональное питание для котов</h1>
+      <blockquote>Занялся собой? Займись котом!</blockquote>
+      <img
+        class="page-main__can-image"
+        src="https://via.placeholder.com/280x270"
+        width="280"
+        height="270"
+        alt="Банка с продукцией"
+      />
+      <section class="program">
+        <div class="program__wrapper">
+          <h2 class="visually-hidden">Подобрать программу</h2>
+          <a class="programm__pick-up button" href="#">Подобрать программу</a>
+          <ul class="program__list">
+            <li class="program__item">
+              <img
+                class="program__icon program__icon--reduce"
+                src="https://via.placeholder.com/50x50"
+                width="50"
+                height="50"
+                alt="Стройный кот"
+              />
+              <h3 class="program__title">Похудение</h3>
+              <p class="program__description">
+                Ваш кот весит больше собаки и почти утратил способность лазить
+                по деревьям? Пора на диету! Cat Energy Slim поможет вашему
+                питомцу сбросить лишний вес.
+              </p>
+              <div class="program__divider"></div>
+              <a href="#">
+                Каталог slim
+                <img
+                  class="program__icon program__icon--reduce"
+                  src="https://via.placeholder.com/25x12"
+                  width="25"
+                  height="12"
+                  alt="Стрелка"
+                />
+              </a>
+            </li>
+            <li class="program__item">
+              <img
+                class="program__icon program__icon--mass"
+                src="https://via.placeholder.com/50x50"
+                width="50"
+                height="50"
+                alt="Тигр"
+              />
+              <h3 class="program__title">Набор массы</h3>
+              <p class="program__description">
+                Заработать авторитет среди дворовых котов и даже собак? Серия
+                Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
+              </p>
+              <div class="program__divider"></div>
+              <a href="#">
+                Каталог pro
+                <img
+                  class="program__icon program__icon--reduce"
+                  src="https://via.placeholder.com/25x12"
+                  width="25"
+                  height="12"
+                  alt="Стрелка"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+       <section class="how">
+        <div class="how__wrapper">
+          <h2>Как это работает</h2>
+          <ul class="how__list">
+            <li class="how__item">
+              <img
+                class="how__icon how__icon--leaf"
+                src="https://via.placeholder.com/60x60"
+                width="60"
+                height="60"
+                alt="Лист"
+              />
+              <p class="how__description">
+                Функциональное питание содержит только полезные питательные
+                вещества.
+              </p>
+            </li>
+            <li class="how__item">
+              <img
+                class="how__icon how__icon--water"
+                src="https://via.placeholder.com/60x60"
+                width="60"
+                height="60"
+                alt="Вода"
+              />
+              <p class="how__description">
+                Выпускается в виде порошка, который нужно лишь залить кипятком и
+                готово.
+              </p>
+            </li>
+            <li class="how__item">
+              <img
+                class="how__icon how__icon--cutlery"
+                src="https://via.placeholder.com/60x60"
+                width="60"
+                height="60"
+                alt="Столовые приборы"
+              />
+              <p class="how__description">
+                Замените один-два приема обычной еды на наше функциональное
+                питание.
+              </p>
+            </li>
+            <li class="how__item">
+              <img
+                class="how__icon how__icon--alarm"
+                src="https://via.placeholder.com/60x60"
+                width="60"
+                height="60"
+                alt="Будильник"
+              />
+              <p class="how__description">
+                Уже через месяц наслаждайтесь изменениями к лучшему вашего
+                питомца!
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+     <footer class="page-footer">
+      <a class="page-footer__logo">
+        <img
+          class="page-footer__logo-image"
+          src="https://via.placeholder.com/128x24"
+          width="128"
+          height="24"
+          alt="Кэт энерджи"
+        />
+      </a>
+
+       <div class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a
+              class="social__link social__link--vkontakte"
+              href="https://vk.com/htmlacademy">
+              Мы в Вконтакте</a>
+          </li>
+          <li class="social__item">
+            <a
+              class="social__link social__link--instagram"
+              href="https://www.instagram.com/htmlacademy">
+              Мы в Инстаграме</a>
+          </li>
+          <li class="social__item">
+            <a
+              class="social__link social__link--facebook"
+              href="https://www.facebook.com/htmlacademy">
+              Мы в Фейсбуке</a>
+          </li>
+        </ul>
+      </div>
+
+       <div class="page-footer__copyright copyright">
+        <p class="copyright__text">HTML Academy</p>
+        <img
+          class="copyright-image"
+          src="https://via.placeholder.com/27x34"
+          width="27"
+          height="34"
+          alt="Логотип HTML Academy"
+        />
+      </div>
+    </footer>
 
   </body>
 </html>
