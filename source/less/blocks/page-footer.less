@@ -1,3 +1,17 @@
-.page-footer {
-  opacity: 1; // TODO:linter
+.page-footer__wrapper {
+  width: 280px;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer__wrapper {
+    width: 708px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__wrapper {
+    width: 1220px;
+    position: relative;
+  }
 }

@@ -1,24 +1,43 @@
 .about {
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
+  overflow: hidden;
+  min-height: 502px;
+  margin: 0 -20px;
+  background-size: 320px 305px;
 }
 
 .about__wrapper {
-  .container();
+  padding: 0 20px;
 }
 
 .about__can-image {
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 3px;
 }
 
 .about__blockquote {
   color: @white;
   text-align: center;
+  margin-bottom: 29px;
 }
 
 .about__title {
   color: @white;
   text-align: center;
   line-height: 1;
+  margin-top: 29px;
+  margin-bottom: 19px;
+}
+
+@media (min-width: @tablet-width) {
+  .about {
+    min-height: 867px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about {
+    min-height: 663px;
+  }
 }

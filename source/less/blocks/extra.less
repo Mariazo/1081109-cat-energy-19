@@ -1,3 +1,26 @@
-.extra__wrapper {
-  .container();
+.extra {
+  min-height: 966px;
+}
+
+@media (min-width: @tablet-width) {
+  .extra {
+    min-height: 1084px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .extra {
+    min-height: 566px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+  }
+
+  .extra__title {
+    width: 100%;
+  }
+
+  .extra__list {
+    flex-grow: 1;
+  }
 }

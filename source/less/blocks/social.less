@@ -1,5 +1,13 @@
-.social__wrapper {
-  .container();
+.social {
+  min-height: 236px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.social__logo {
+  text-align: center;
 }
 
 .social__list {
@@ -12,23 +20,37 @@
   display: inline-block;
 }
 
+.social__academy {
+  display: flex;
+  justify-content: space-between;
+}
+
 .social__link--vkontakte {
   width: 22px;
   height: 12px;
-  background-image: url("../../img/icon-vk.svg");
+  background-image: url("../img/icon-vk.svg");
   background-repeat: no-repeat;
 }
 
 .social__link--instagram {
   width: 17px;
   height: 17px;
-  background-image: url("../../img/icon-insta.svg");
+  background-image: url("../img/icon-insta.svg");
   background-repeat: no-repeat;
 }
 
 .social__link--facebook {
   width: 10px;
   height: 19px;
-  background-image: url("../../img/icon-fb.svg");
+  background-image: url("../img/icon-fb.svg");
   background-repeat: no-repeat;
+}
+
+@media (min-width: @tablet-width) {
+  .social {
+    min-height: 150px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }

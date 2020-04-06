@@ -1,9 +1,68 @@
-.program__wrapper {
-  .container();
+.program {
+  min-height: 552px;
 }
 
 .program__title {
   font-size: 24px;
   line-height: 1.54;
   text-transform: uppercase;
+  display: flex;
+}
+
+.program__pick-up {
+  margin-bottom: 22px;
+}
+
+.program__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.program__item {
+  background-color: @light-gray;
+  padding: 20px;
+  min-height: 266px;
+}
+
+.program__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.program__header {
+  display: flex;
+}
+
+.program__icon-background {
+  border-radius: 50%;
+  background-color: @leaf;
+  width: 50px;
+  height: 50px;
+}
+
+@media (min-width: @tablet-width) {
+  .program {
+    min-height: 774px;
+  }
+
+  .program__item {
+    min-height: 372px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .program {
+    min-height: 372px;
+  }
+
+  .program__list {
+    flex-direction: row;
+  }
+
+  .program__item {
+    width: 50%;
+  }
+
+  .program__item:not(:last-child) {
+    margin-bottom: 0;
+  }
 }

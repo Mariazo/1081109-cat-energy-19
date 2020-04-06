@@ -1,7 +1,39 @@
-.how__wrapper {
-  .container();
+.how {
+  min-height: 447px;
+  overflow: hidden;
+}
+
+.how__item {
+  display: flex;
 }
 
 .how__icon {
   background-color: @leaf;
+}
+
+@media (min-width: @tablet-width) {
+  .how {
+    min-height: 780px;
+    border-bottom: 1px solid @light-gray;
+  }
+
+  .how__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .how__item {
+    width: 50%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .how {
+    min-height: 460px;
+    border: none;
+  }
+
+  .how__item {
+    width: 25%;
+  }
 }

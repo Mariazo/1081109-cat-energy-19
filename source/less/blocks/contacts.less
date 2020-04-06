@@ -1,5 +1,7 @@
-.contacts__wrapper {
-  .container();
+.contacts {
+  min-height: 114px;
+  overflow: hidden;
+  display: flex;
 }
 
 .contants__title {
@@ -12,4 +14,19 @@
 
 .contacts__text {
   line-height: 1.43;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts {
+    min-height: 201px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    position: absolute;
+    z-index: 2;
+    background: @white;
+    top: 95px;
+  }
 }
