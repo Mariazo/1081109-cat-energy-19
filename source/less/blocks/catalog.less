@@ -1,7 +1,24 @@
-.catalog__wrapper {
-  .container();
+.catalog {
+  min-height: 1776px;
 }
 
 .catalog__order {
   font-size: 16px;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog {
+    min-height: 2427px;
+  }
+
+  .catalog__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog {
+    min-height: 1305px;
+  }
 }

@@ -1,5 +1,7 @@
 .item {
   border-top: 1px solid @light-gray;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .item__points td {
@@ -14,4 +16,10 @@
   color: @black;
   line-height: 1.25;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .item__points {
+    width: 100%;
+  }
 }

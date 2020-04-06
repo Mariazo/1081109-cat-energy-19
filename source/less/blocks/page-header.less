@@ -1,3 +1,70 @@
-.page-header {
-  opacity: 1; // TODO: linter
+.page-header__wrapper {
+  width: 280px;
+  min-height: 65px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header__main {
+  border-bottom: 1px solid @light-gray;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-header__logo {
+  background-image: url("../img/logo-mobile.svg");
+  background-repeat: no-repeat;
+  width: 191px;
+  height: 39px;
+}
+
+.page-header__toggle {
+  font-size: 0;
+  width: 25px;
+  height: 19px;
+  background-image: url("../img/icon-mobile-menu.svg");
+  background-repeat: no-repeat;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header__wrapper {
+    width: 708px;
+    min-height: 83px;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  .page-header__logo {
+    background-image: url("../img/logo-tablet.svg");
+    width: 174px;
+    height: 59px;
+  }
+
+  .page-header__toggle {
+    display: none;
+  }
+
+  .page-header__main {
+    border: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__wrapper {
+    width: 1220px;
+    min-height: 113px;
+  }
+
+  .page-header__logo {
+    background-image: url("../img/logo-desktop.svg");
+    width: 203px;
+    height: 60px;
+  }
 }
