@@ -1,5 +1,15 @@
-.form {
-  .container();
+.input-text() {
+  font-size: 16px;
+  line-height: 1.13;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+
+.form__row {
+  margin-bottom: 14px;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .form label {
@@ -16,4 +26,76 @@
 .form__blockquote {
   color: @black;
   line-height: 1.29;
+}
+
+.form textarea {
+  .input-text();
+  width: 100%;
+  height: 150px;
+  box-sizing: border-box;
+  border: solid 1px @border;
+  padding: 15px;
+}
+
+.form input[type="text"],
+.form input[type="number"],
+.form input[type="tel"],
+.form input[type="email"] {
+  .input-text();
+  height: 45px;
+  padding: 0 16px;
+  box-sizing: border-box;
+  border: solid 1px @border;
+  flex-grow: 1;
+  margin-left: 15px;
+}
+
+.form__program-block {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form__extra-block {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media (min-width: @tablet-width) {
+  .form__extra-block {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .form__extra-block div {
+    width: 50%;
+  }
+
+  .form__submit {
+    display: inline-block;
+    width: 283px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__extra-block div {
+    width: 25%;
+  }
+
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form__person-block,
+  .form__program-block {
+    width: 50%;
+  }
+
+  .form__group-label {
+    width: 100%;
+  }
+
+  .form__contacts-block {
+    display: flex;
+  }
 }

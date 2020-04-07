@@ -13,13 +13,38 @@
   text-decoration: none;
 }
 
+.main-nav__item a:link,
+.main-nav__item a:visited {
+  color: @black;
+}
+
+@media (max-width: @tablet-width - 1) {
+  .main-nav--mobile-close {
+    display: none;
+  }
+}
+
 @media (min-width: @tablet-width) {
+  .main-nav {
+    flex-grow: 1;
+  }
+
   .main-nav__list {
     display: flex;
     justify-content: space-between;
+    margin-left: 96px;
   }
 
   .main-nav__item {
     border: none;
+    font-size: 18px;
+    color: @black-two;
+    font-weight: normal;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__list {
+    margin-left: 540px;
   }
 }
