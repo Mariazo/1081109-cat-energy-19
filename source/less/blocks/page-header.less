@@ -23,13 +23,21 @@
 
 .page-header__toggle {
   font-size: 0;
-  width: 25px;
   height: 19px;
-  background-image: url("../img/icon-mobile-menu.svg");
   background-repeat: no-repeat;
   padding: 0;
   border: none;
   background-color: transparent;
+}
+
+.page-header__toggle--open {
+  width: 25px;
+  background-image: url("../img/icon-mobile-menu.svg");
+}
+
+.page-header__toggle--close {
+  width: 19px;
+  background-image: url("../img/icon-close.svg");
 }
 
 @media (min-width: @tablet-width) {
