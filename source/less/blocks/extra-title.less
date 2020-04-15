@@ -1,0 +1,26 @@
+.extra-title {
+  margin-top: 28px;
+  margin-bottom: 30px;
+
+  & p {
+    margin-bottom: 0;
+    max-width: 250px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .extra-title {
+    margin-bottom: 77px;
+    margin-top: 66px;
+
+    & p {
+      max-width: none;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .extra-title {
+    margin-top: 75px;
+  }
+}

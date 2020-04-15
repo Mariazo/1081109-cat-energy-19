@@ -39,90 +39,119 @@
 
   <main class="page-main">
     <form class="form" action="https://echo.htmlacademy.ru" method="POST">
-      <h1 class="form__title heading">Подбор программы</h1>
-      <blockquote class="form__blockquote blockquote">
-        Заполните анкету и мы подберем программу питания для вашего кота
-      </blockquote>
+      <h1 class="form__title heading container">Подбор программы</h1>
 
-      <div class="form__person-block">
-        <div class="form__row">
-          <label for="name" class="form__label">Имя:*</label>
-          <input name="name" type="text" id="name" value="Барсик" required />
+      <div class="container">
+        <blockquote class="form__blockquote blockquote">
+          Заполните анкету и мы подберем программу питания для вашего кота
+        </blockquote>
+      </div>
+
+      <div class="form__info-block container">
+        <div class="form__person-block">
+          <div class="form__row">
+            <label for="name" class="form__label">Имя:*</label>
+            <input name="name" type="text" id="name" value="Барсик" required />
+          </div>
+          <div class="form__row">
+            <label for="weight" class="form__label">Вес (кг):*</label>
+            <input name="weight" type="number" id="weight" value="7" required />
+          </div>
+          <div class="form__row">
+            <label for="age" class="form__label">Возраст (лет):</label>
+            <input name="age" type="number" id="age" value="7" />
+          </div>
         </div>
-        <div class="form__row">
-          <label for="weight" class="form__label">Вес (кг):*</label>
-          <input name="weight" type="number" id="weight" value="7" required />
-        </div>
-        <div class="form__row">
-          <label for="age" class="form__label">Возраст (лет):</label>
-          <input name="age" type="number" id="age" value="7" />
+
+        <div class="form__row form__program-block">
+          <label class="radio">Похудение
+            <input type="radio" name="program" value="slim" checked />
+            <span class="radio__checkmark"></span>
+          </label>
+          <label class="radio">Набор массы
+            <input type="radio" name="program" value="pro" />
+            <span class="radio__checkmark"></span>
+          </label>
+          <label class="radio">Не знаю (Нужен ваш совет)
+            <input type="radio" name="program" value="advice" />
+            <span class="radio__checkmark"></span>
+          </label>
         </div>
       </div>
 
-      <div class="form__row form__program-block">
-        <label class="radio">Похудение
-          <input type="radio" name="program" value="slim" checked />
-          <span class="radio__checkmark"></span>
-        </label>
-        <label class="radio">Набор массы
-          <input type="radio" name="program" value="pro" />
-          <span class="radio__checkmark"></span>
-        </label>
-        <label class="radio">Не знаю (Нужен ваш совет)
-          <input type="radio" name="program" value="advice" />
-          <span class="radio__checkmark"></span>
-        </label>
-      </div>
-
-      <p class="form__group-label heading heading--line heading--line-multi">
-        Контактные данные (владельца кота)
-      </p>
-
-      <div class="form__contacts-block">
-        <div class="form__row">
-          <label for="email" class="form__label">E-mail:*</label>
-          <input name="email" type="email" id="email" value="kuklachev@gmail.com" required />
-          <span class="form__email-addon"></span>
-        </div>
-        <div class="form__row">
-          <label for="email" class="form__label">Телефон:*</label>
-          <input name="phone" type="tel" pattern="[0-9]{1}\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}" id="phone" value="8 (960) 900-60-90" required />
-          <span class="form__phone-addon"></span>
+      <div class="line">
+        <div class="container">
+          <p class="form__group-label heading heading--line">
+            Контактные данные (владельца кота)
+          </p>
         </div>
       </div>
 
-      <p class="form__group-label heading heading--line">Комментарий</p>
-      <div class="form__row form__comment-block">
-        <textarea name="comment" rows="10">
+      <div class="container">
+        <div class="form__contacts-block">
+          <div class="form__row">
+            <label for="email" class="form__label">E-mail:*</label>
+            <input name="email" type="email" id="email" value="kuklachev@gmail.com" required />
+            <span class="form__email-addon"></span>
+          </div>
+          <div class="form__row">
+            <label for="email" class="form__label">Телефон:*</label>
+            <input name="phone" type="tel" pattern="[0-9]{1}\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}" id="phone" value="8 (960) 900-60-90" required />
+            <span class="form__phone-addon"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="line">
+        <div class="container">
+          <p class="form__group-label heading heading--line">
+            Комментарий
+          </p>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="form__row form__comment-block">
+          <textarea name="comment" rows="10">
 Расскажите обо всех повадках кота</textarea>
+        </div>
       </div>
 
-      <p class="form__group-label form__group-label--extra heading heading--line">
-        Дополнительно
-      </p>
-      <div class="form__row form__extra-block">
-        <label class="checkbox">Сахарозаменитель
-          <input type="checkbox" name="sweetener" checked />
-          <span class="checkbox__checkmark"></span>
-        </label>
-        <label class="checkbox">Питьевая вода
-          <input type="checkbox" name="water" />
-          <span class="checkbox__checkmark"></span>
-        </label>
-        <label class="checkbox">Молоко
-          <input type="checkbox" name="milk" />
-          <span class="checkbox__checkmark"></span>
-        </label>
-        <label class="checkbox">Витамины
-          <input type="checkbox" name="vitamins" />
-          <span class="checkbox__checkmark"></span>
-        </label>
+      <div class="line">
+        <div class="container">
+          <p class="form__group-label form__group-label--extra heading heading--line">
+            Дополнительно
+          </p>
+        </div>
       </div>
 
-      <input class="form__submit button" type="submit" value="Отправить заявку" />
-      <small class="form__legend text">
-        <sup>*</sup> — Обязательные поля
-      </small>
+      <div class="container">
+        <div class="form__row form__extra-block">
+          <label class="checkbox">Сахарозаменитель
+            <input type="checkbox" name="sweetener" checked />
+            <span class="checkbox__checkmark"></span>
+          </label>
+          <label class="checkbox">Питьевая вода
+            <input type="checkbox" name="water" />
+            <span class="checkbox__checkmark"></span>
+          </label>
+          <label class="checkbox">Молоко
+            <input type="checkbox" name="milk" />
+            <span class="checkbox__checkmark"></span>
+          </label>
+          <label class="checkbox">Витамины
+            <input type="checkbox" name="vitamins" />
+            <span class="checkbox__checkmark"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="container">
+        <input class="form__submit button" type="submit" value="Отправить заявку" />
+        <small class="form__legend text">
+          <sup>*</sup> — Обязательные поля
+        </small>
+      </div>
     </form>
 
     <div class="relative">
