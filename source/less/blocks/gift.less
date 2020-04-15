@@ -1,8 +1,24 @@
+.gift {
+  position: relative;
+}
+
 .gift__background {
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
   width: 280px;
   height: 289px;
+}
+
+.gift__icon {
+  width: 56px;
+  height: 61px;
+  fill: @white;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 104px;
 }
 
 .gift__title {
@@ -11,4 +27,47 @@
   font-weight: normal;
   line-height: 1.25;
   color: @white;
+  margin: 0;
+  padding: 188px 50px 0 50px;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .gift__background {
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    width: 708px;
+    height: 200px;
+  }
+
+  .gift__icon {
+    margin: auto 0;
+    top: 57px;
+    bottom: 0;
+    left: 90px;
+  }
+
+  .gift__title {
+    padding: 72px 110px 0 423px;
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .gift__background {
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+    width: 245px;
+    height: 289px;
+  }
+
+  .gift__icon {
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 65px;
+  }
+
+  .gift__title {
+    padding: 187px 47px 0 47px;
+    text-align: center;
+  }
 }

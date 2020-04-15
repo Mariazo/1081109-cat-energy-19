@@ -11,7 +11,7 @@
   text-align: center;
   line-height: 40px;
   letter-spacing: normal;
-  font-size: 14px;
+  font-size: 16px;
   height: 40px;
 }
 
@@ -22,4 +22,12 @@
 .button:active {
   background-color: @button-down;
   color: rgba(255, 255, 255, 0.3);
+}
+
+@media (min-width: @tablet-width) {
+  .button {
+    font-size: 20px;
+    height: 52px;
+    line-height: 52px;
+  }
 }
