@@ -12,20 +12,23 @@
   align-items: center;
 }
 
-.form label {
-  @color: #222222;
-  font-size: 16px;
-  line-height: 1.13;
-  text-transform: uppercase;
-}
-
-.form__legend {
-  line-height: 1.14;
+.form__title {
+  margin-top: 27px;
+  margin-bottom: 37px;
 }
 
 .form__blockquote {
   color: @black;
   line-height: 1.29;
+  padding-right: 20px;
+  margin-bottom: 39px;
+}
+
+.form__label {
+  @color: #222222;
+  font-size: 16px;
+  line-height: 1.13;
+  text-transform: uppercase;
 }
 
 .form textarea {
@@ -35,6 +38,11 @@
   box-sizing: border-box;
   border: solid 1px @border;
   padding: 15px;
+  resize: none;
+}
+
+.form__group-label {
+  margin-bottom: 34px;
 }
 
 .form input[type="text"],
@@ -50,33 +58,154 @@
   margin-left: 15px;
 }
 
+.form__person-block {
+  margin-bottom: 23px;
+}
+
 .form__program-block {
+  box-sizing: border-box;
+  width: 320px;
+  margin: 0 -20px;
+  padding: 20px;
   flex-direction: column;
   align-items: flex-start;
+  border: 1px solid @border-light;
+  margin-bottom: 28px;
+}
+
+.form__comment-block {
+  margin-bottom: 29px;
+}
+
+.form__contacts-block {
+  margin-bottom: 28px;
 }
 
 .form__extra-block {
   flex-direction: column;
   align-items: flex-start;
+  margin-bottom: 33px;
+}
+
+.form__submit {
+  margin-bottom: 22px;
+}
+
+.form__legend {
+  line-height: 1.14;
+  display: block;
+  text-align: center;
+  margin-bottom: 32px;
+
+  & sup {
+    vertical-align: baseline;
+  }
 }
 
 @media (min-width: @tablet-width) {
+  .form__title {
+    font-size: 60px;
+    margin-top: 57px;
+    margin-bottom: 55px;
+  }
+
+  .form__blockquote {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 66px;
+    padding-left: 40px;
+    padding-right: 290px;
+  }
+
+  .form__row {
+    padding: 0 40px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+
+  .form__label {
+    @color: #222222;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .form input[type="text"],
+  .form input[type="number"],
+  .form input[type="tel"],
+  .form input[type="email"] {
+    height: 52px;
+    padding: 0 20px;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .form textarea {
+    .input-text();
+    height: 174px;
+  }
+
+  .form__person-block {
+    margin-bottom: 72px;
+  }
+
+  .form__program-block {
+    margin: 0 40px;
+    padding: 25px 28px;
+    width: calc(100% - 80px);
+    margin-bottom: 73px;
+  }
+
   .form__extra-block {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
+
+    & label {
+      width: 36%;
+    }
   }
 
-  .form__extra-block div {
-    width: 50%;
+  .form__group-label {
+    margin-bottom: 76px;
+  }
+
+  .form__contacts-block {
+    margin-bottom: 65px;
+  }
+
+  .form__comment-block {
+    margin-bottom: 65px;
+  }
+
+  .form__group-label--extra {
+    margin-bottom: 57px;
   }
 
   .form__submit {
     display: inline-block;
+    margin-left: 40px;
     width: 283px;
+  }
+
+  .form__legend {
+    display: inline-block;
+    vertical-align: super;
+    margin-left: 59px;
+    margin-bottom: 91px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .form__title {
+    margin-top: 75px;
+  }
+
+  .form__blockquote {
+    margin-bottom: 66px;
+    padding-left: 0;
+    padding-right: 850px;
+  }
+
   .form__extra-block div {
     width: 25%;
   }
@@ -86,9 +215,21 @@
     flex-wrap: wrap;
   }
 
-  .form__person-block,
-  .form__program-block {
+  .form__row {
+    padding: 0;
+  }
+
+  .form__person-block {
     width: 50%;
+    margin-right: 40px;
+    margin-bottom: 49px;
+  }
+
+  .form__program-block {
+    width: calc(50% - 40px);
+    margin: 0;
+    height: 196px;
+    padding: 25px;
   }
 
   .form__group-label {
@@ -97,5 +238,38 @@
 
   .form__contacts-block {
     display: flex;
+    width: 100%;
+    margin-bottom: 47px;
+
+    & .form__row:first-child {
+      margin-right: 80px;
+    }
+
+    & .form__row {
+      flex-grow: 1;
+    }
+  }
+
+  .form__comment-block {
+    margin-bottom: 67px;
+  }
+
+  .form__extra-block {
+    margin-bottom: 29px;
+
+    & label {
+      width: 15%;
+    }
+  }
+
+  .form__submit {
+    margin-left: 0;
+    width: 568px;
+  }
+
+  .form__legend {
+    margin-left: 84px;
+    margin-bottom: 101px;
+    margin-top: 15px;
   }
 }

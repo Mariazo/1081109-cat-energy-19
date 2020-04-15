@@ -1,20 +1,59 @@
-.how {
+.how__wrapper {
   min-height: 447px;
-  overflow: hidden;
+  padding-top: 30px;
+  box-sizing: border-box;
+}
+
+.how__title {
+  margin-bottom: 38px;
+  margin-top: 0;
 }
 
 .how__item {
   display: flex;
+  height: 60px;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .how__icon {
   background-color: @leaf;
+  margin-right: 20px;
+  min-width: 60px;
+  min-height: 60px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.how__icon--leaf {
+  background-image: url("../img/advantage-leaf@1x.png");
+}
+
+.how__icon--water {
+  background-image: url("../img/advantage-powder@1x.png");
+}
+
+.how__icon--dining {
+  background-image: url("../img/advantage-dining@1x.png");
+}
+
+.how__icon--clock {
+  background-image: url("../img/advantage-clock@1x.png");
 }
 
 @media (min-width: @tablet-width) {
   .how {
-    min-height: 780px;
     border-bottom: 1px solid @light-gray;
+  }
+
+  .how__wrapper {
+    min-height: 780px;
+    padding-top: 45px;
+  }
+
+  .how__title {
+    font-size: 60px;
+    margin-bottom: 38px;
   }
 
   .how__list {
@@ -23,17 +62,63 @@
   }
 
   .how__item {
-    width: 50%;
+    width: 324px;
+    height: 213px;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 70px;
+    padding-top: 34px;
+
+    &:nth-child(odd) {
+      margin-right: auto;
+    }
+
+    &::after {
+      content: attr(data-number);
+      color: @white-three;
+      position: absolute;
+      z-index: -1;
+      font-size: 281px;
+      right: 77px;
+      bottom: -29px;
+      line-height: 1;
+    }
+  }
+
+  .how__icon {
+    min-width: 80px;
+    min-height: 80px;
+    margin-bottom: 16px;
+  }
+
+  .how__description {
+    line-height: 1.5;
+    width: 250px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .how {
-    min-height: 460px;
     border: none;
   }
 
+  .how__wrapper {
+    min-height: 460px;
+    padding-top: 73px;
+  }
+
   .how__item {
-    width: 25%;
+    width: 245px;
+    margin-right: 0;
+    margin-bottom: 0;
+
+    &:not(:last-child) {
+      margin-right: 80px;
+    }
+
+    &::after {
+      right: 0;
+    }
   }
 }
