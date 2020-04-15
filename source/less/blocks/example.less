@@ -1,6 +1,23 @@
 .example {
+  background-color: @white-three;
+}
+
+.example__wrapper {
   min-height: 705px;
-  overflow: hidden;
+}
+
+.example__result-block {
+  padding-top: 29px;
+}
+
+.example__title {
+  margin-top: 0;
+  margin-bottom: 35px;
+}
+
+.example__description {
+  padding-right: 5px;
+  margin-bottom: 25px;
 }
 
 .example__image {
@@ -8,12 +25,20 @@
   background-repeat: no-repeat;
   width: 311px;
   height: 232px;
+  margin-left: -20px;
+  margin-bottom: 39px;
 }
 
 .example__cost {
   color: @black;
   line-height: 1.43;
   text-align: center;
+  margin-bottom: 35px;
+}
+
+.example__control {
+  display: flex;
+  justify-content: space-around;
 }
 
 .example__point {
@@ -25,27 +50,99 @@
 
 @media (min-width: @tablet-width) {
   .example {
+    // prettier-ignore
+    background: linear-gradient(to bottom, @white 0%, @white 57%, @white 57%, @light-gray 57%, @light-gray 100%);
+  }
+
+  .example__wrapper {
     min-height: 1081px;
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .example__result-block {
+    padding-top: 42px;
+  }
+
+  .example__title {
+    font-size: 60px;
+    margin-bottom: 65px;
+  }
+
+  .example__description {
+    line-height: 1.5;
+    padding-right: 10px;
+    margin-bottom: 53px;
   }
 
   .example__image {
     background-image: url("../img/before-tablet@1x.png");
     width: 676px;
     height: 499px;
+    margin-left: 16px;
+    margin-bottom: 37px;
+  }
+
+  .example__cost {
+    display: block;
+    font-size: 20px;
+    line-height: 28px;
+    width: 190px;
+    float: right;
+    padding-top: 8px;
+    text-align: end;
+  }
+
+  .example__interactive {
+    height: 580px;
+  }
+
+  .example__point {
+    line-height: 1;
+    font-size: 20px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .example {
+    // prettier-ignore
+    background: linear-gradient(to bottom, @white 0%, @white 30%, @white 30%, @light-gray 30%, @light-gray 100%);
+  }
+
+  .example__wrapper {
     min-height: 652px;
-    display: flex;
     flex-wrap: nowrap;
+  }
+
+  .example__result-block {
+    padding-top: 55px;
+    width: 474px;
+  }
+
+  .example__title {
+    margin-bottom: 146px;
+  }
+
+  .example__description {
+    padding-right: 40px;
+    margin-bottom: 68px;
+  }
+
+  .example__cost {
+    width: 100%;
+    float: none;
+    text-align: start;
+  }
+
+  .example__cost-whitespaces {
+    width: 55px;
+    display: inline-block;
   }
 
   .example__image {
     background-image: url("../img/before-desktop@1x.png");
+    background-position-x: 80px;
     width: 730px;
+    margin-bottom: 59px;
   }
 }

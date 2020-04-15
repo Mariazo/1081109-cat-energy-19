@@ -7,4 +7,73 @@
 
 .heading--line {
   font-size: 24px;
+  position: relative;
+  margin: 0 -20px;
+  padding: 0 20px;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    height: 3px;
+    width: 100vw;
+    background-color: @leaf;
+    position: absolute;
+    margin: auto 0 auto 22px;
+    top: 7px;
+    bottom: 0;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .heading--line-multi {
+    &::after {
+      margin-left: 46px;
+      top: -18px;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .heading--line {
+    font-size: 36px;
+    margin: 0 -30px;
+    padding: 0 30px;
+    padding-left: 67px;
+
+    &::after,
+    &::before {
+      top: 10px;
+    }
+
+    &::after {
+      margin-left: 36px;
+    }
+
+    &::before {
+      content: "";
+      height: 3px;
+      width: 100px;
+      background-color: @leaf;
+      position: absolute;
+      margin: auto 0 auto 0;
+      left: -72px;
+      bottom: 0;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .heading--line {
+    margin: 0 -110px;
+    padding: 0 110px;
+    padding-left: 109px;
+
+    &::after {
+      margin-left: 36px;
+    }
+
+    &::before {
+      left: -30px;
+    }
+  }
 }

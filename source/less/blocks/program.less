@@ -2,17 +2,6 @@
   min-height: 552px;
 }
 
-.program__title {
-  font-size: 24px;
-  line-height: 1.54;
-  text-transform: uppercase;
-  display: flex;
-}
-
-.program__pick-up {
-  margin-bottom: 22px;
-}
-
 .program__list {
   display: flex;
   flex-direction: column;
@@ -21,22 +10,55 @@
 .program__item {
   background-color: @light-gray;
   padding: 20px;
+  box-sizing: border-box;
   min-height: 266px;
+  position: relative;
 }
 
 .program__item:not(:last-child) {
   margin-bottom: 20px;
 }
 
-.program__header {
-  display: flex;
-}
-
 .program__icon-background {
+  position: absolute;
   border-radius: 50%;
   background-color: @leaf;
   width: 50px;
   height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.program__title {
+  font-size: 24px;
+  line-height: 1.54;
+  margin: 10px 0 30px 71px;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: @black;
+}
+
+.program__description {
+  margin-bottom: 22px;
+}
+
+.program__divider {
+  height: 1px;
+  background-color: @border;
+  margin-bottom: 20px;
+}
+
+.program__link {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1;
+  color: @black;
+  width: 122px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 @media (min-width: @tablet-width) {
@@ -44,8 +66,52 @@
     min-height: 774px;
   }
 
+  .program__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
   .program__item {
     min-height: 372px;
+    padding: 0;
+    padding-left: 55px;
+  }
+
+  .program__title {
+    font-size: 36px;
+    line-height: 1.03;
+    margin: 76px 0 25px 0;
+  }
+
+  .program__description {
+    line-height: 1.5;
+    width: 320px;
+    margin-bottom: 56px;
+  }
+
+  .program__divider {
+    display: none;
+  }
+
+  .program__link {
+    width: 156px;
+    font-size: 20px;
+  }
+
+  .program__icon-background {
+    width: 200px;
+    height: 200px;
+    right: 63px;
+    top: 90px;
+  }
+
+  .program__icon--slim {
+    width: 141px;
+    height: 194px;
+  }
+
+  .program__icon--pro {
+    width: 268px;
+    height: 113px;
   }
 }
 
@@ -64,5 +130,32 @@
 
   .program__item:not(:last-child) {
     margin-bottom: 0;
+    margin-right: 80px;
+  }
+
+  .program__title {
+    margin: 76px 0 74px 159px;
+  }
+
+  .program__description {
+    width: 470px;
+    margin-bottom: 31px;
+  }
+
+  .program__icon-background {
+    width: 100px;
+    height: 100px;
+    top: 46px;
+    left: 52px;
+  }
+
+  .program__icon--slim {
+    width: 71px;
+    height: 97px;
+  }
+
+  .program__icon--pro {
+    width: 134px;
+    height: 57px;
   }
 }

@@ -1,28 +1,32 @@
 .social {
+  background-color: @light-gray;
+}
+
+.social__wrapper {
   min-height: 236px;
+  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: space-evenly;
+  padding-top: 39px;
 }
 
 .social__logo {
   text-align: center;
+  margin-bottom: 26px;
 }
 
 .social__list {
   display: flex;
-  justify-content: space-evenly;
+  align-items: center;
+  height: 62px;
+  border-top: 1px solid @border;
+  border-bottom: 1px solid @border;
 }
 
 .social__link {
   font-size: 0;
-  display: inline-block;
-}
-
-.social__academy {
-  display: flex;
-  justify-content: space-between;
+  display: block;
 }
 
 .social__link--vkontakte {
@@ -30,6 +34,7 @@
   height: 12px;
   background-image: url("../img/icon-vk.svg");
   background-repeat: no-repeat;
+  margin-left: 73px;
 }
 
 .social__link--instagram {
@@ -37,6 +42,7 @@
   height: 17px;
   background-image: url("../img/icon-insta.svg");
   background-repeat: no-repeat;
+  margin-left: 37px;
 }
 
 .social__link--facebook {
@@ -44,13 +50,70 @@
   height: 19px;
   background-image: url("../img/icon-fb.svg");
   background-repeat: no-repeat;
+  margin-left: 39px;
+}
+
+.social__academy {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social__academy-text {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  color: @greyish-brown;
 }
 
 @media (min-width: @tablet-width) {
-  .social {
+  .social__wrapper {
     min-height: 150px;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding: 0;
+  }
+
+  .social__logo {
+    margin: 0;
+  }
+
+  .social__list {
+    flex-grow: 1;
+    border: none;
+  }
+
+  .social__link--vkontakte {
+    width: 30px;
+    height: 16px;
+    margin-left: 157px;
+  }
+
+  .social__link--instagram {
+    width: 23px;
+    height: 23px;
+    margin-left: 27px;
+  }
+
+  .social__link--facebook {
+    width: 14px;
+    height: 28px;
+    margin-left: 29px;
+  }
+
+  .social__academy {
+    flex-grow: 0;
+  }
+
+  .social__academy-text {
+    margin-right: 10px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .social__link--vkontakte {
+    margin-left: 413px;
   }
 }
