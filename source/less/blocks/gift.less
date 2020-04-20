@@ -5,8 +5,13 @@
 .gift__background {
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-size: auto 289px;
   width: 280px;
   height: 289px;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+  }
 }
 
 .gift__icon {
@@ -35,8 +40,13 @@
 @media (min-width: @tablet-width) {
   .gift__background {
     background-image: url("../img/gift-photo-tablet@1x.jpg");
+    background-size: 708px auto;
     width: 708px;
     height: 200px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+    }
   }
 
   .gift__icon {
@@ -55,8 +65,13 @@
 @media (min-width: @desktop-width) {
   .gift__background {
     background-image: url("../img/gift-photo-desktop@1x.jpg");
+    background-size: auto 289px;
     width: 245px;
     height: 289px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/gift-photo-desktop@2x.jpg");
+    }
   }
 
   .gift__icon {

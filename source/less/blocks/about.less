@@ -2,17 +2,22 @@
   position: relative;
 
   &::after {
+    content: "";
     position: absolute;
     background-image: url("../img/index-background-mobile@1x.jpg");
     background-repeat: no-repeat;
     background-position-x: center;
+    background-size: auto 305px;
     background-color: #63a73a;
-    content: "";
     top: 0;
     left: 0;
     width: 100%;
     height: 305px;
     z-index: -2;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+    }
   }
 }
 
@@ -105,12 +110,17 @@
 @media (min-width: @desktop-width) {
   .about {
     &::after {
-      background-image: url("../img/index-background-desktop@1x.jpg");
       content: "";
+      background-image: url("../img/index-background-desktop@1x.jpg");
+      background-size: auto 696px;
       left: 50%;
       width: 50%;
       top: -113px;
       height: 696px;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+      }
     }
   }
 
