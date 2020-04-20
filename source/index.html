@@ -8,6 +8,10 @@
   <meta name="format-detection" content="telephone=no" />
   <link rel="stylesheet" href="./css/style.css" />
   <script defer src="./js/app.js"></script>
+  <script>
+    document.createElement("picture");
+  </script>
+  <script src="./js/picturefill.min.js" async></script>
 </head>
 
 <body>
@@ -48,9 +52,15 @@
             Занялся собой? Займись котом!
           </blockquote>
           <picture>
-            <source media="(min-width: 1200px)" srcset="./img/index-can-desktop@1x.png" />
-            <source media="(min-width: 768px)" srcset="./img/index-can-tablet@1x.jpg" />
-            <img src="./img/index-can-mobile@1x.png" alt="Банка с продукцией" class="about__can-image" width="280" height="270" />
+            <source media="(min-width: 1200px)" srcset="
+                  ./img/index-can-desktop@1x.png 1x,
+                  ./img/index-can-desktop@2x.png 2x
+                " />
+            <source media="(min-width: 768px)" srcset="
+                  ./img/index-can-tablet@1x.jpg 1x,
+                  ./img/index-can-tablet@2x.jpg 2x
+                " />
+            <img src="./img/index-can-mobile@1x.png" srcset="./img/index-can-mobile@2x.png 2x" alt="Банка с продукцией" class="about__can-image" width="280" height="270" />
           </picture>
           <a class="about__pick-up button" href="form.html">Подобрать программу</a>
         </div>
