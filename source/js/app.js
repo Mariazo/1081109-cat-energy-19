@@ -21,8 +21,8 @@ function initComparisons() {
   var clicked = 0;
 
   if (!after) {
-     return;
-   }
+    return;
+  }
 
   /* Get the width and height of the img element */
   var w = after.offsetWidth;
