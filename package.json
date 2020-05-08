@@ -20,6 +20,7 @@
     "gulp-svgstore": "^7.0.1",
     "gulp-uglify": "^3.0.2",
     "gulp-webp": "^4.0.1",
+    "postcss-object-fit-images": "^1.1.2",
     "posthtml-include": "^1.4.3",
     "stylelint": "10.1.x",
     "stylelint-config-htmlacademy": "0.1.x"
@@ -49,6 +50,8 @@
   },
   "dependencies": {
     "del": "^5.1.0",
-    "gulp-htmlmin": "^5.0.1"
+    "gulp-htmlmin": "^5.0.1",
+    "object-fit-images": "^3.2.4",
+    "picturefill": "^3.0.3"
   }
 }

@@ -27,6 +27,10 @@
   width: 0;
 }
 
+.checkbox input:focus ~ .checkbox__checkmark {
+  outline: 2px auto fade(@leaf, 50%);
+}
+
 .checkbox__checkmark {
   position: absolute;
   top: 0;

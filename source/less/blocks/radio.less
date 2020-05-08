@@ -27,6 +27,10 @@
   width: 0;
 }
 
+.radio input:focus ~ .radio__checkmark {
+  outline: 2px auto fade(@leaf, 50%);
+}
+
 .radio__checkmark {
   position: absolute;
   top: 0;

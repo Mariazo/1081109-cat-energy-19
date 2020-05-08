@@ -20,6 +20,14 @@
   background-repeat: no-repeat;
   width: 191px;
   height: 39px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .page-header__toggle {
@@ -49,7 +57,7 @@
   .page-header__wrapper {
     width: 708px;
     margin: 0 auto;
-    min-height: 83px;
+    height: 83px;
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
@@ -78,7 +86,7 @@
 @media (min-width: @desktop-width) {
   .page-header__wrapper {
     width: 1220px;
-    min-height: 113px;
+    height: 113px;
   }
 
   .page-header__logo {

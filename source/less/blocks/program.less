@@ -55,10 +55,26 @@
   font-size: 16px;
   line-height: 1;
   color: @black;
-  width: 122px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+
+  &:hover .program__arrow {
+    width: 34px;
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.program__arrow {
+  width: 25px;
+  height: 12px;
+  margin-left: 14px;
+  background-image: url("../img/icon-right-arrow-long.svg");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 @media (min-width: @tablet-width) {
@@ -93,8 +109,11 @@
   }
 
   .program__link {
-    width: 156px;
     font-size: 20px;
+  }
+
+  .program__arrow {
+    margin-left: 25px;
   }
 
   .program__icon-background {
