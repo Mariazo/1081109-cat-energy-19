@@ -7,22 +7,18 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
   <link rel="stylesheet" href="./css/style.min.css">
-  <script defer src="./js/app.min.js"></script>
-  <script>
-    document.createElement("picture");
-  </script>
 </head>
 
 <body>
   <div style="display:none">
-    <include src="source/img/sprite.svg"></include>
+    <include src="build/img/sprite.svg"></include>
   </div>
 
   <header class="page-header page-header--no-js">
     <div class="page-header__wrapper">
       <div class="page-header__main-wrapper">
         <div class="page-header__main container">
-          <a class="page-header__logo"></a>
+          <a href="index.html" class="page-header__logo"></a>
           <button id="menu-toggle" class="page-header__toggle page-header__toggle--open" type="button">
             Открыть меню
           </button>
@@ -73,8 +69,7 @@
                 ">
             <img src="./img/index-can-mobile@1x.png" srcset="./img/index-can-mobile@2x.png 2x" alt="Банка с продукцией" class="about__can-image" width="280" height="270">
           </picture>
-          <a class="about__pick-up button" href="form.html">Подобрать
-            программу</a>
+          <a class="about__pick-up button" href="form.html">Подобрать программу</a>
         </div>
       </div>
     </section>
@@ -85,8 +80,7 @@
           <div class="program__icon-background">
             <img class="program__icon program__icon--slim" src="./img/icon-cat-slim.svg" width="35" height="49" alt="Стройный кот">
           </div>
-          <h3 class="program__title">
-            Похудение</h3>
+          <h2 class="program__title">Похудение</h2>
           <p class="program__description text">
             Ваш кот весит больше собаки
             и почти утратил способность
@@ -98,17 +92,15 @@
           </p>
           <div class="program__divider">
           </div>
-          <a href="#" class="program__link">
-            Каталог slim
-            <img class="program__arrow" src="./img/icon-right-arrow-verylong.svg" width="25" height="12" alt="Стрелка">
+          <a href="catalog.html" class="program__link">
+            Каталог slim<span class="program__arrow"></span>
           </a>
         </li>
         <li class="program__item">
           <div class="program__icon-background">
             <img class="program__icon program__icon--pro" src="./img/icon-cat-pro.svg" width="67" height="28" alt="Тигр">
           </div>
-          <h3 class="program__title">
-            Набор массы</h3>
+          <h2 class="program__title">Набор массы</h2>
           <p class="program__description text">
             Заработать авторитет среди
             дворовых котов и даже собак?
@@ -119,9 +111,8 @@
           </p>
           <div class="program__divider">
           </div>
-          <a href="#" class="program__link">
-            Каталог pro
-            <img class="program__arrow" src="./img/icon-right-arrow-verylong.svg" width="25" height="12" alt="Стрелка">
+          <a href="catalog.html" class="program__link">
+            Каталог pro<span class="program__arrow"></span>
           </a>
         </li>
       </ul>
@@ -221,6 +212,10 @@
             <div class="img-compare">
               <div class="img-compare__image img-compare__before">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="./img/before-desktop@1x.webp 1x, ./img/before-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="./img/before-tablet@1x.webp 1x, ./img/before-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="./img/before-mobile@1x.webp 1x, ./img/before-mobile@2x.webp 2x">
+
                   <source media="(min-width: 1200px)" srcset="
                         ./img/before-desktop@1x.png 1x,
                         ./img/before-desktop@2x.png 2x
@@ -235,6 +230,10 @@
               <div class="img-compare__slider"></div>
               <div class="img-compare__image img-compare__after">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="./img/after-desktop@1x.webp 1x, ./img/after-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="./img/after-tablet@1x.webp 1x, ./img/after-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="./img/after-mobile@1x.webp 1x, ./img/after-mobile@2x.webp 2x">
+
                   <source media="(min-width: 1200px)" srcset="
                         ./img/after-desktop@1x.png 1x,
                         ./img/after-desktop@2x.png 2x
@@ -277,15 +276,17 @@
       </section>
 
       <section class="map">
-        <img class="map__pin" src="./img/map-pin.png" width="55" height="53" alt="Точка на карте">
+        <h2 class="visually-hidden">Карта</h2>
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A25c242b9de56a29c8ef53c7a8a54b6e6b99048a3faf432b67559c9f6472ea13e&amp;source=constructor"></iframe>
       </section>
     </div>
   </main>
 
   <footer>
     <section class="social">
+      <h2 class="visually-hidden">Контакты</h2>
       <div class="social__wrapper container">
-        <a href="/" class="social__logo">
+        <a href="index.html" class="social__logo">
           <img src="./img/logo-footer.svg" width="128" height="24" alt="Кэт энерджи">
         </a>
         <ul class="social__list list-reset">
@@ -311,7 +312,7 @@
             </a>
           </li>
         </ul>
-        <a href="https://htmlacademy.ru/" class="social__academy">
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="social__academy">
           <p class="social__academy-text">HTML Academy</p>
           <svg class="social__academy-icon" width="40" height="50">
             <use xlink:href="#icon-htmlacademy"></use>
@@ -320,6 +321,11 @@
       </div>
     </section>
   </footer>
+
+  <script defer src="./js/app.min.js"></script>
+  <script>
+    document.createElement("picture");
+  </script>
 </body>
 
 </html>

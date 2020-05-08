@@ -7,8 +7,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
   <link rel="stylesheet" href="./css/style.min.css">
-  <script defer src="./js/app.min.js"></script>
-  <script>document.createElement("picture");</script>
 </head>
 
 <body>
@@ -20,7 +18,7 @@
     <div class="page-header__wrapper">
       <div class="page-header__main-wrapper">
         <div class="page-header__main container">
-          <a class="page-header__logo"></a>
+          <a href="index.html" class="page-header__logo"></a>
           <button id="menu-toggle" class="page-header__toggle page-header__toggle--open" type="button">
             Открыть меню
           </button>
@@ -29,7 +27,7 @@
       <nav id="menu" class="main-nav">
         <ul class="main-nav__list list-reset">
           <li class="main-nav__item">
-            <a href="/">Главная</a>
+            <a href="index.html">Главная</a>
           </li>
           <li class="main-nav__item">
             <a href="catalog.html">Каталог продукции</a>
@@ -103,8 +101,7 @@
           </div>
           <div class="form__row relative">
             <label for="email" class="form__label">Телефон:*</label>
-            <input name="phone" type="tel" pattern="[0-9]{1}\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}" id="phone"
-              value="8 (960) 900-60-90" required>
+            <input name="phone" type="tel" pattern="[0-9]{1}\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}" id="phone" value="8 (960) 900-60-90" required>
             <svg class="form__addon" width="21" height="21">
               <use xlink:href="#icon-phone"></use>
             </svg>
@@ -177,15 +174,17 @@
       </section>
 
       <section class="map">
-        <img class="map__pin" src="./img/map-pin.png" width="55" height="53" alt="Точка на карте">
+        <h2 class="visually-hidden">Карта</h2>
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A25c242b9de56a29c8ef53c7a8a54b6e6b99048a3faf432b67559c9f6472ea13e&amp;source=constructor"></iframe>
       </section>
     </div>
   </main>
 
   <footer>
     <section class="social">
+      <h2 class="visually-hidden">Контакты</h2>
       <div class="social__wrapper container">
-        <a href="/" class="social__logo">
+        <a href="index.html" class="social__logo">
           <img src="./img/logo-footer.svg" width="128" height="24" alt="Кэт энерджи">
         </a>
         <ul class="social__list list-reset">
@@ -211,7 +210,7 @@
             </a>
           </li>
         </ul>
-        <a href="https://htmlacademy.ru/" class="social__academy">
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="social__academy">
           <p class="social__academy-text">HTML Academy</p>
           <svg class="social__academy-icon" width="40" height="50">
             <use xlink:href="#icon-htmlacademy"></use>
@@ -220,6 +219,11 @@
       </div>
     </section>
   </footer>
+
+  <script defer src="./js/app.min.js"></script>
+  <script>
+    document.createElement("picture");
+  </script>
 </body>
 
 </html>

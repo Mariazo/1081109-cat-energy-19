@@ -11,11 +11,21 @@
 
 .main-nav__item a {
   text-decoration: none;
+
+  &:link,
+  &:visited {
+    color: @black;
+  }
 }
 
-.main-nav__item a:link,
-.main-nav__item a:visited {
-  color: @black;
+.main-nav__item:not(.main-nav__item--active) a {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (max-width: @mobile-width-only) {

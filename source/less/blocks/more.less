@@ -7,34 +7,46 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: url("../img/icon-plus-mobile.svg");
+  background-size: 31px 31px;
+  background-repeat: no-repeat;
+  background-position: center 25px;
 }
 
 .more__title {
+  width: 100%; // IE11 fix
   font-size: 16px;
   font-weight: normal;
   line-height: 1.25;
   color: @black;
   text-transform: uppercase;
-  margin-top: 18px;
+  margin-top: 79px;
   margin-bottom: 0;
+  text-align: center;
 }
 
 .more__description {
+  width: 100%; // IE11 fix
   line-height: 1.33;
   font-size: 12px;
   margin-top: 9px;
   margin-bottom: 0;
-}
-
-.more__plus-icon {
-  margin-top: 26px;
-  opacity: 0.2;
+  text-align: center;
 }
 
 .more__button {
   margin-top: 21px;
   background-color: @white-three;
   color: @greyish-brown;
+
+  &:hover {
+    background-color: @white-seven;
+  }
+
+  &:active {
+    background-color: @white-seven;
+    color: fade(@greyish-brown, 30%);
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -46,11 +58,9 @@
   .more__wrapper {
     padding-top: 27px;
     width: auto;
-  }
-
-  .more__plus-icon {
-    width: 61px;
-    height: 61px;
+    background-image: url("../img/icon-plus.svg");
+    background-size: 61px 61px;
+    background-position-y: 53px;
   }
 
   .more__title {
@@ -58,7 +68,7 @@
     line-height: 1;
     text-align: center;
     padding: 0 50px;
-    margin-top: 43px;
+    margin-top: 135px;
   }
 
   .more__description {
